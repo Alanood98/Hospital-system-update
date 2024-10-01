@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\inpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:inpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\outpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:outpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|c:\\users\\codeline user\\downloads\\hospitalclass-main\\hospitalclass-main\\clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{760E1D7E-0761-43AD-B5FF-D4022B48A4E0}|HospitalClassINhernite.csproj|solutionrelative:clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Clinic.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Clinic.cs",
+              "RelativeDocumentMoniker": "Clinic.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Clinic.cs",
+              "RelativeToolTip": "Clinic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T07:26:45.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OutPatient.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\OutPatient.cs",
+              "RelativeDocumentMoniker": "OutPatient.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\OutPatient.cs",
+              "RelativeToolTip": "OutPatient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T07:10:46.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Person.cs",
+              "RelativeDocumentMoniker": "Person.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Person.cs",
+              "RelativeToolTip": "Person.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:43:28.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InPatient.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\InPatient.cs",
+              "RelativeDocumentMoniker": "InPatient.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\InPatient.cs",
+              "RelativeToolTip": "InPatient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:37:28.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Doctor.cs",
+              "RelativeDocumentMoniker": "Doctor.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Doctor.cs",
+              "RelativeToolTip": "Doctor.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAcwFIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T05:41:34.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Appointment.cs",
+              "RelativeDocumentMoniker": "Appointment.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Appointment.cs",
+              "RelativeToolTip": "Appointment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T05:44:35.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Hospital.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Hospital.cs",
+              "RelativeDocumentMoniker": "Hospital.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Hospital.cs",
+              "RelativeToolTip": "Hospital.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowDEAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T05:44:33.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Room.cs",
+              "RelativeDocumentMoniker": "Room.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Room.cs",
+              "RelativeToolTip": "Room.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAwwC8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T05:38:19.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Patient.cs",
+              "RelativeDocumentMoniker": "Patient.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Patient.cs",
+              "RelativeToolTip": "Patient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T05:35:55.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Codeline User\\Downloads\\HospitalClass-main\\HospitalClass-main\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T10:54:56.39Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

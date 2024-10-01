@@ -1,0 +1,4 @@
+C:\Users\Codeline User\Downloads\HospitalClass-main\HospitalClass-main\obj\Debug\net8.0\HospitalClassINhernite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codeline User\Downloads\HospitalClass-main\HospitalClass-main\obj\Debug\net8.0\HospitalClassINhernite.AssemblyInfoInputs.cache
+C:\Users\Codeline User\Downloads\HospitalClass-main\HospitalClass-main\obj\Debug\net8.0\HospitalClassINhernite.AssemblyInfo.cs
+C:\Users\Codeline User\Downloads\HospitalClass-main\HospitalClass-main\obj\Debug\net8.0\HospitalClassINhernite.csproj.CoreCompileInputs.cache
