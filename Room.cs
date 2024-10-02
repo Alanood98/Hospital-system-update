@@ -1,6 +1,4 @@
-﻿
-
-using static HospitalClassINhernite.Room;
+﻿using static HospitalClassINhernite.Room;
 
 namespace HospitalClassINhernite
 {
@@ -17,7 +15,7 @@ namespace HospitalClassINhernite
         {
             RoomNumber = roomNumber;
             R = roomType;
-            
+
         }
 
 
