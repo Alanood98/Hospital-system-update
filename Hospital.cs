@@ -9,13 +9,13 @@ namespace HospitalClassINhernite
     public class Hospital
     {
 
-      public static List<Patient> patients=new List<Patient>();
-        public static List <Doctor> doctors=new List<Doctor>();
-        public static List<Room> rooms=new List<Room>();
+        public static List<Patient> patients = new List<Patient>();
+        public static List<Doctor> doctors = new List<Doctor>();
+        public static List<Room> rooms = new List<Room>();
 
-        public Hospital( Patient patient,Doctor doctor,Room rooms)
+        public Hospital(Patient patient, Doctor doctor, Room rooms)
         {
-            Patient patients =patient;
+            Patient patients = patient;
             Doctor doctors = doctor;
             Room room = rooms;
 
