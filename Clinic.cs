@@ -11,9 +11,10 @@ namespace HospitalClassINhernite
         public int ClinicID { get; set; }
         public string ClinicName { get; set; }
         public Specialization ClinicSpec { get; set; }
+        public bool isBooked = true;
         public enum ClinicSpecialization { Cardiology, Neurology, Dermatology }
-        public List<Room> Rooms;
-        public Dictionary<Doctor, List<Appointment>> AvailableAppointments;
+        public List<Room> Rooms = new List<Room>();
+        public Dictionary<Doctor, List<Appointment>> AvailableAppointments = new Dictionary<Doctor, List<Appointment>>();
 
         public enum Specialization
         {
@@ -27,7 +28,7 @@ namespace HospitalClassINhernite
             ClinicID = clinicID;
             ClinicName = clinicName;
             ClinicSpec = clinicSpec;
-           
+
         }
         public void AddRoom(Room room)
         {
@@ -36,28 +37,39 @@ namespace HospitalClassINhernite
 
         public void AddAvailableAppointment(Doctor doctor, DateTime appointmentDay, TimeSpan period)
         {
-            int numberOfSlots = (int)period.TotalHours;
-
-            List<Appointment> newAppointments = new List<Appointment>();
-
-            for (int i = 0; i < numberOfSlots; i++)
+            TimeSpan start = new TimeSpan(9, 0, 0);
+            if (!AvailableAppointments.ContainsKey(doctor))
             {
-                DateTime appointmentTime = appointmentDay.AddHours(i);
-                Appointment appointment = new Appointment(null, doctor, appointmentDay, period,  false);  // Null patient initially
-
-                newAppointments.Add(appointment);
-            }
-
-            if (AvailableAppointments.ContainsKey(doctor))
-            {
-                AvailableAppointments[doctor].AddRange(newAppointments);
+                AvailableAppointments[doctor] = new List<Appointment>();
+                for (int i = 0; i < period.TotalHours; i++)
+                {
+                    Appointment appointment = new Appointment();
+                    appointment.ScheduleAppointment(null, appointmentDay, start.Add(new TimeSpan(i, 0, 0)), false);
+                    AvailableAppointments[doctor].Add(appointment);
+                    Console.WriteLine($"Appointment Scheduled for {doctor.Name} in {appointmentDay.AddHours(i).ToString("yyy-MM-dd")}  at {start.Add(new TimeSpan(i, 0, 0))}");
+                }
             }
             else
             {
-                AvailableAppointments[doctor] = newAppointments;
+                Console.WriteLine($"{doctor.Name} Not Available to  Schedule Appointment in this Clinic");
             }
+            Console.WriteLine("**************************************************");
+        }
 
-            Console.WriteLine($"Added {numberOfSlots} available appointments for Dr. {doctor.Name} on {appointmentDay.ToShortDateString()}");
+        public void CancelAppointment(Patient patient, DateTime appointmentDay, TimeSpan appointmentTime)
+        {
+            foreach (var cancel in AvailableAppointments)
+            {
+                //Iterating Through Appointments:
+                for (int i = 0; i < cancel.Value.Count; i++)
+                {
+                    if (cancel.Value[i].AppointmentDate == appointmentDay && cancel.Value[i].AppointmentTime == appointmentTime && cancel.Value[i].IsBooked)
+                    {
+                        cancel.Value[i].CancelAppointment(appointmentDay, appointmentTime);
+                        return;
+                    }
+                }
+            }
         }
 
 
@@ -85,46 +97,46 @@ namespace HospitalClassINhernite
             }
         }
 
-        public bool BookAppointment(Patient patient, Doctor doctor, DateTime appointmentDay, TimeSpan appointmentTime)
+        public void BookAppointment(Patient patient, Doctor doctor, DateTime appointmentDay, TimeSpan appointmentTime)
         {
+            Console.WriteLine("**************Book Appointment***********************");
+            bool flage = false;
             if (AvailableAppointments.ContainsKey(doctor))
             {
-                List<Appointment> doctorAppointments = AvailableAppointments[doctor];
-
-                foreach (var availableAppointment in doctorAppointments)
+                List<Appointment> appointments = AvailableAppointments[doctor];
+                for (int i = 0; i < AvailableAppointments[doctor].Count; i++)
                 {
-                    if (availableAppointment.AppointmentDate.HasValue &&
-                        availableAppointment.AppointmentDate.Value.Date == appointmentDay.Date &&
-                        availableAppointment.AppointmentTime == appointmentTime)
+                    if (!appointments[i].IsBooked && appointments[i].AppointmentTime == appointmentTime && appointments[i].AppointmentDate == appointmentDay)
                     {
-                        if (!availableAppointment.IsBooked)
-                        {
-                            availableAppointment.patient = patient;
-                            availableAppointment.IsBooked = true;
-
-                            Console.WriteLine($"Appointment booked for {patient.Name} with Dr. {doctor.Name} on {appointmentDay:MMMM dd, yyyy} at {appointmentTime:hh\\:mm}.");
-                            return true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("The selected time slot is already booked.");
-                            return false;
-                        }
+                        appointments[i].ScheduleAppointment(patient, appointmentDay, appointmentTime, true);
+                        Console.WriteLine($"{patient.Name} Assigned appointment on {appointmentDay.ToString("yyy-MM-dd")} at {appointmentTime}");
+                        flage = true;
                     }
                 }
-
-                Console.WriteLine("The selected time slot is not available.");
-                return false;
+                if (flage != true)
+                    Console.WriteLine("Selected appointment is not available.");
             }
             else
             {
-                Console.WriteLine("No available appointments for the selected doctor.");
-                return false;
+                Console.WriteLine("Doctor Not Found..");
             }
         }
+        //public void BookAppointment(Patient patient, DateTime appointmentDay, TimeSpan appointmentTime)
+        //{
+        //    foreach (var b in AvailableAppointments)
+        //    {
+        //        for (int i = 0; i < b.Value.Count; i++)
+        //        {
+        //            if (b.Value[i].AppointmentDate == appointmentDay && b.Value[i].AppointmentTime == appointmentTime && !b.Value[i].IsBooked)
+        //            {
+        //                b.Value[i].ScheduleAppointment(patient, appointmentDay, appointmentTime, isBooked);
+        //                return;
+        //            }
+        //        }
+        //    }
+        //}
 
 
     }
 
 }
-
