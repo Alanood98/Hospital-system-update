@@ -22,12 +22,13 @@ namespace HospitalClassINhernite
             AssignedDoctor = assignedDoctor;
             AdmissionDate = admissionDate;
         }
-        public void AssignRoom(Room room) { 
+        public void AssignRoom(Room room)
+        {
 
             room.OccupyRoom();
             AssignedRoom = room;
 
-            }
+        }
 
         public void Discharge()
         {
