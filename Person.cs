@@ -1,8 +1,6 @@
-﻿
-
-namespace HospitalClassINhernite
+﻿namespace HospitalClassINhernite
 {
-   public abstract class Person
+    public abstract class Person
     {
 
         public string Name;
@@ -14,7 +12,7 @@ namespace HospitalClassINhernite
         {
             Name = name;
             Age = age;
-           g=gender;
+            g = gender;
 
 
         }
