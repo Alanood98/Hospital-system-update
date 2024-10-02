@@ -1,25 +1,28 @@
-﻿
-using System.Globalization;
+﻿using System.Globalization;
+using System.Numerics;
 using System.Reflection;
 
 namespace HospitalClassINhernite
 {
-    public class Doctor:Person
+    public class Doctor : Person
     {
 
 
-      
+
 
         public int DoctorID;
-        public string Specialization;
-        public static List<Patient> DoctorPatients = new List<Patient>();
-        public static List<Room> AssignedClinics = new List<Room>();
-
-
-        public Doctor(int did , string name,int age , Gender Gender,string spec):base(name, age, Gender)
+        public enum DocSpec
         {
-            DoctorID = did;
-            Specialization = spec;
+            Cardiology, Neurology, Dermatology
+        }
+        public DocSpec Specialization;
+        public static List<Patient> DoctorPatients = new List<Patient>();
+        public static List<Clinic> AssignedClinics = new List<Clinic>();
+
+        public Doctor(int did, string name, int age, Gender Gender, DocSpec specialization) : base(name, age, Gender)
+        {
+            this.DoctorID = did;
+            this.Specialization = specialization;
         }
 
         public void AddPatient(Patient patient)
@@ -38,35 +41,23 @@ namespace HospitalClassINhernite
         public override void DisplayInfo()
         {
             base.DisplayInfo();
-            Console.WriteLine($" doctor id : {DoctorID } , Specialization : {Specialization} ");
+            Console.WriteLine($" doctor id : {DoctorID} , Specialization : {Specialization} ");
 
         }
+
+        //Assigns the doctor to a specific clinic
         public void AssignToClinic(Clinic clinic, DateTime day, TimeSpan period)
         {
-            // Calculate the number of hours for the period
-            int totalHours = (int)period.TotalHours;
 
-            // Generate 1-hour slots for the period
-            for (int i = 0; i < totalHours; i++)
+            
+            if (!AssignedClinics.Contains(clinic)) 
             {
-                // Create the start time for the slot
-                DateTime appointmentTime = day.AddHours(i);
-
-                // Create an appointment for this time slot
-                Appointment appointment = new Appointment(null, this, appointmentTime, TimeSpan.FromHours(1), false); // Assuming the constructor requires Patient, Doctor, DateTime, TimeSpan, and a booked status
-
-                // Add the appointment to the clinic's dictionary under this doctor
-                if (clinic.AvailableAppointments.ContainsKey(this))
-                {
-                    clinic.AvailableAppointments[this].Add(appointment);
-                }
-                else
-                {
-                    // Create a new list if the doctor doesn't have appointments yet
-                    clinic.AvailableAppointments[this] = new List<Appointment> { appointment };
-                }
-
-                Console.WriteLine($"Assigned Doctor {DoctorID} to clinic on {appointmentTime}");
+                clinic.AddAvailableAppointment(this, day, period);
+                AssignedClinics.Add(clinic);
+            }
+            else
+            {
+                Console.WriteLine("the clinic in the list");
             }
         }
 
@@ -82,7 +73,7 @@ namespace HospitalClassINhernite
                 Console.WriteLine($"Doctor {DoctorID} is assigned to the following clinics:");
                 foreach (var clinic in AssignedClinics)
                 {
-                    Console.WriteLine($"- Clinic ID: {clinic.AssignedClinic}, Name: {clinic.AssignedClinic}, Specialization: {clinic.AssignedClinic}");
+                    Console.WriteLine($" Name: {clinic.ClinicName}, Specialization: {clinic.ClinicSpec}");
                 }
             }
         }
