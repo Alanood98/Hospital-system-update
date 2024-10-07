@@ -1,7 +1,10 @@
 ﻿using System.Numerics;
+using System.Xml.Linq;
+using static HospitalClassINhernite.Appointment;
+using static HospitalClassINhernite.Patient;
 namespace HospitalClassINhernite
 {
-    public class Appointment
+    public class Appointment: IDisplayInfo , ISchedulable
     {
         public Patient patient;
         public Doctor doctor;
@@ -33,6 +36,23 @@ namespace HospitalClassINhernite
         public void GetAppointmentDetails()
         {
             Console.WriteLine($"Appointment scheduled for {patient.Name} on {AppointmentDate.Value:MMMM dd, yyyy} at {AppointmentTime:hh\\:mm}");
+        }
+        public interface IDisplayInfo
+        {
+            void DisplayInfo();
+
+
+        }
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Appointment scheduled for {patient.Name} on {AppointmentDate.Value:MMMM dd, yyyy} at {AppointmentTime:hh\\:mm}");
+        }
+
+        public interface ISchedulable
+        {
+            void ScheduleAppointment();
+            void CancelAppointment();
+
         }
     }
 }
