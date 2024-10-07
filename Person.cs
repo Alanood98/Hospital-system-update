@@ -1,6 +1,8 @@
-﻿namespace HospitalClassINhernite
+﻿using static HospitalClassINhernite.Person;
+
+namespace HospitalClassINhernite
 {
-    public abstract class Person
+    public abstract class Person: IDisplayInfo
     {
 
         public string Name;
@@ -23,8 +25,8 @@
 
         public interface IDisplayInfo
         {
-            void OccupyRoom();
-            void VacateRoom();
+            void DisplayInfo();
+           
 
         }
 
