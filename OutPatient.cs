@@ -28,6 +28,13 @@ namespace HospitalClassINhernite
 
         }
 
+        public interface IOutPatientCare : IPatientCare
+        {
+            void BookAppointment();
+           
+
+        }
+
 
     }
 }
