@@ -1,10 +1,13 @@
 ﻿using System.Globalization;
 using System.Numerics;
 using System.Reflection;
+using static HospitalClassINhernite.Appointment;
+using static HospitalClassINhernite.InPatient;
+using static HospitalClassINhernite.OutPatient;
 
 namespace HospitalClassINhernite
 {
-    public class Doctor : Person
+    public class Doctor : Person , IInPatientCare, IOutPatientCare ,IDisplayInfo, ISchedulable
     {
 
 
@@ -40,7 +43,7 @@ namespace HospitalClassINhernite
 
 
 
-        public override void DisplayInfo()
+        public  void DisplayInfo()
         {
             base.DisplayInfo();
             Console.WriteLine($" doctor id : {DoctorID} , Specialization : {Specialization} ");
@@ -79,7 +82,29 @@ namespace HospitalClassINhernite
                 }
             }
         }
+         public void BookAppointment()
+        {
+
+        }
+
+        public void  Discharge()
+        {
+
+        }
+        public void AssignRoom()
+        {
+            //AssignedClinics.Clear();
+            //AssignedClinics.AddRange(AssignedClinics);
 
 
+        }
+        public void ScheduleAppointment()
+        {
+
+        }
+        public void CancelAppointment()
+        {
+
+        }
     }
 }

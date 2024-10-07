@@ -4,7 +4,7 @@ using static HospitalClassINhernite.Appointment;
 using static HospitalClassINhernite.Patient;
 namespace HospitalClassINhernite
 {
-    public class Appointment: IDisplayInfo , ISchedulable
+    public class Appointment: IDisplayInfo
     {
         public Patient patient;
         public Doctor doctor;

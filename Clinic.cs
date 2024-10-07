@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HospitalClassINhernite.Appointment;
+using static HospitalClassINhernite.Person;
 namespace HospitalClassINhernite
 {
-    public class Clinic
+    public class Clinic: IDisplayInfo , ISchedulable
     {
         public int ClinicID { get; set; }
         public string ClinicName { get; set; }
@@ -120,6 +122,16 @@ namespace HospitalClassINhernite
             {
                 Console.WriteLine("Doctor Not Found..");
             }
+        }
+        public interface IDisplayInfo
+        {
+            void DisplayInfo();
+
+
+        }
+        public void DisplayInfo(IDisplayInfo info)
+        {
+           
         }
     }
 }

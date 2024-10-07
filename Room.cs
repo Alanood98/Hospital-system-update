@@ -2,7 +2,7 @@
 
 namespace HospitalClassINhernite
 {
-    public class Room: IRoomManagement
+    public class Room: IRoomManagement, IDisplayInfo
     {
         public static List<Patient> roomlist = new List<Patient>();
         public int RoomNumber;
@@ -51,5 +51,16 @@ namespace HospitalClassINhernite
             void VacateRoom();
             
         }
+        public interface IDisplayInfo
+        {
+            void DisplayInfo();
+
+
+        }
+        public void DisplayInfo(IDisplayInfo info)
+        {
+
+        }
+
     }
 }

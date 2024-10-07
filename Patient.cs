@@ -47,6 +47,11 @@ namespace HospitalClassINhernite
             
 
         }
+        public void PatientCare()
+        {
+            Console.WriteLine("Enter you hart rate : ");
+            Console.WriteLine("Enter you blood pressure: ");
+        }
 
 
     }

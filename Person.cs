@@ -18,7 +18,7 @@ namespace HospitalClassINhernite
 
 
         }
-        public virtual void DisplayInfo()
+        public  void DisplayInfo()
         {
             Console.WriteLine($"Name : {Name} , Age : {Age} , Gender : {g}");
         }

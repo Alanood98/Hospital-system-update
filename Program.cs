@@ -6,6 +6,7 @@ using static HospitalClassINhernite.Room;
 using static HospitalClassINhernite.Person;
 using static System.Reflection.Metadata.BlobBuilder;
 using static HospitalClassINhernite.Doctor;
+using static HospitalClassINhernite.Nurse;
 namespace HospitalClassINhernite
 {
     internal class Program

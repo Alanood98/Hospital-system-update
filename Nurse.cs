@@ -45,6 +45,18 @@ namespace HospitalClassINhernite
         {
 
         }
+        public void PatientCare()
+        {
+            
+        }
+        public void ScheduleAppointment()
+        {
+
+        }
+        public void CancelAppointment()
+        {
+
+        }
 
 
 
