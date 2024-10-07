@@ -5,10 +5,11 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static HospitalClassINhernite.Patient;
 
 namespace HospitalClassINhernite
 {
-    public class InPatient : Patient
+    public class InPatient : Patient 
     {
         public Room Room;
         public Doctor AssignedDoctor;
@@ -42,6 +43,13 @@ namespace HospitalClassINhernite
             Console.WriteLine($" pation id : {PatientID} , aliment : {Ailment}  , room :{AssignRoom},doctor:{AssignedDoctor}");
 
 
+
+        }
+
+        public interface IInPatientCare : IPatientCare
+        {
+            void Discharge();
+            void AssignRoom();
 
         }
 
