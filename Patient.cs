@@ -1,6 +1,8 @@
-﻿namespace HospitalClassINhernite
+﻿using static HospitalClassINhernite.Patient;
+
+namespace HospitalClassINhernite
 {
-    public class Patient : Person
+    public class Patient : Person 
     {
 
         public int PatientID;
@@ -19,18 +21,18 @@
 
 
         }
-        public override void DisplayInfo()
-        {
-            base.DisplayInfo();
-            Console.WriteLine($" pation id : {PatientID} , aliment : {Ailment} ");
+        //public override void DisplayInfo()
+        //{
+        //    base.DisplayInfo();
+        //    Console.WriteLine($" pation id : {PatientID} , aliment : {Ailment} ");
 
-        }
+        //}
 
         public void AssignRoom(Room room)
         {
             room.OccupyRoom();
             AssignedRoom = room;
-            con
+            
         }
 
         public void Discharge()
@@ -38,6 +40,14 @@
             AssignedRoom.VacateRoom();
             AssignedRoom = null;
         }
+
+        public interface IPatientCare
+        {
+            void patientCare();
+            
+
+        }
+
 
     }
 }
