@@ -2,7 +2,7 @@
 
 namespace HospitalClassINhernite
 {
-    public class Room
+    public class Room: IRoomManagement
     {
         public static List<Patient> roomlist = new List<Patient>();
         public int RoomNumber;
@@ -44,6 +44,12 @@ namespace HospitalClassINhernite
         public void AssignToClinic(Clinic clinic)
         {
             AssignedClinic = clinic;
+        }
+        public interface IRoomManagement
+        {
+            void OccupyRoom();
+            void VacateRoom();
+            
         }
     }
 }

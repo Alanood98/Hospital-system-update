@@ -30,6 +30,7 @@
         {
             room.OccupyRoom();
             AssignedRoom = room;
+            con
         }
 
         public void Discharge()

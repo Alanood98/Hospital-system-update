@@ -21,6 +21,13 @@
             Console.WriteLine($"Name : {Name} , Age : {Age} , Gender : {g}");
         }
 
+        public interface IDisplayInfo
+        {
+            void OccupyRoom();
+            void VacateRoom();
+
+        }
+
 
 
 
