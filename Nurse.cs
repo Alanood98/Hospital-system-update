@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HospitalClassINhernite.Appointment;
+using static HospitalClassINhernite.Patient;
 
 namespace HospitalClassINhernite
 {
-    public class Nurse : Person
+    public class Nurse : Person , IDisplayInfo , IPatientCare, ISchedulable
     {
         public int NurseID;
         public Clinic AssignedClinic;
@@ -39,7 +41,12 @@ namespace HospitalClassINhernite
         {
 
         }
+        public void DisplayInfo(IDisplayInfo info)
+        {
 
-        
+        }
+
+
+
     }
 }
