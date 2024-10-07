@@ -29,11 +29,13 @@ namespace HospitalClassINhernite
         {
 
             DoctorPatients.Add(patient);
+            Console.WriteLine("Patient add successfully");
         }
 
         public void RemovePatient(Patient patient)
         {
             DoctorPatients.Remove(patient);
+            Console.WriteLine(" remove Patient  successfully");
         }
 
 

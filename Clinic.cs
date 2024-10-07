@@ -28,10 +28,20 @@ namespace HospitalClassINhernite
         }
         public void AddRoom(Room room)
         {
-            Rooms.Add(room);
+            Console.WriteLine("......Add Room.......");
+            if (room != null)
+            {
+                Rooms.Add(room);
+                room.OccupyRoom();
+            }
+            else
+            {
+                Console.WriteLine("invalid");
+            }
         }
         public void AddAvailableAppointment(Doctor doctor, DateTime appointmentDay, TimeSpan period)
         {
+            Console.WriteLine("......Add Available Appointment.......");
             TimeSpan start = new TimeSpan(9, 0, 0);
             TimeSpan end = new TimeSpan(11, 0, 0);
             if (!AvailableAppointments.ContainsKey(doctor))
@@ -53,13 +63,15 @@ namespace HospitalClassINhernite
         }
         public void CancelAppointment(Patient patient, Doctor doctor, DateTime appointmentDay, TimeSpan appointmentTime)
         {
-            foreach (var Kvp in AvailableAppointments)
+            Console.WriteLine("......Cancel Appointment.......");
+            foreach (var cencel in AvailableAppointments)
             {
-                for (int i = 0; i < Kvp.Value.Count; i++)
+                for (int i = 0; i < cencel.Value.Count; i++)
                 {
-                    if (Kvp.Value[i].AppointmentDate == appointmentDay && Kvp.Value[i].AppointmentTime == appointmentTime && Kvp.Value[i].IsBooked)
+                    if (cencel.Value[i].AppointmentDate == appointmentDay && cencel.Value[i].AppointmentTime == appointmentTime && cencel.Value[i].IsBooked)
                     {
-                        Kvp.Value[i].CancelAppointment(patient, appointmentDay, appointmentTime);
+                        cencel.Value[i].CancelAppointment(patient, appointmentDay, appointmentTime);
+                        Console.WriteLine("Appointment is cancel");
                         return;
                     }
                 }
@@ -67,6 +79,7 @@ namespace HospitalClassINhernite
         }
         public void DisplayAvailableAppointments()
         {
+            Console.WriteLine("............Display Available Appointments..........");
             if (AvailableAppointments.Count == 0)
             {
                 Console.WriteLine("No available appointments at the moment.");
@@ -87,7 +100,7 @@ namespace HospitalClassINhernite
         public void BookAppointment(Patient patient, Doctor doctor, DateTime appointmentDay, TimeSpan appointmentTime)
         {
             Console.WriteLine("**************Book Appointment***********************");
-            bool flage = false;
+            bool booked = false;
             if (AvailableAppointments.ContainsKey(doctor))
             {
                 List<Appointment> appointments = AvailableAppointments[doctor];
@@ -97,10 +110,10 @@ namespace HospitalClassINhernite
                     {
                         appointments[i].ScheduleAppointment(patient, doctor, appointmentDay, appointmentTime, true);
                         Console.WriteLine($"{patient.Name} Assigned appointment on {appointmentDay.ToString("yyy-MM-dd")} at {appointmentTime}");
-                        flage = true;
+                        booked = true;
                     }
                 }
-                if (flage != true)
+                if (booked != true)
                     Console.WriteLine("Selected appointment is not available.");
             }
             else
