@@ -1,61 +1,41 @@
 ﻿using System.Globalization;
 using System.Numerics;
 using System.Reflection;
-using static HospitalClassINhernite.Appointment;
-using static HospitalClassINhernite.InPatient;
-using static HospitalClassINhernite.OutPatient;
-
 namespace HospitalClassINhernite
 {
-    public class Doctor : Person , IInPatientCare, IOutPatientCare ,IDisplayInfo, ISchedulable
+    public class Doctor : Person , IOutPatientCare, IInPatientCare
     {
-
-
-
-
         public int DoctorID;
         public enum DocSpec
         {
             Cardiology, Neurology, Dermatology
         }
         public DocSpec Specialization;
-        public static List<Patient> DoctorPatients = new List<Patient>();
-        public static List<Clinic> AssignedClinics = new List<Clinic>();
-
+        public List<Patient> DoctorPatients = new List<Patient>();
+        public List<Clinic> AssignedClinics = new List<Clinic>();
+        public Nurse nurse;
         public Doctor(int did, string name, int age, Gender Gender, DocSpec specialization) : base(name, age, Gender)
         {
             this.DoctorID = did;
             this.Specialization = specialization;
         }
-
         public void AddPatient(Patient patient)
         {
-
             DoctorPatients.Add(patient);
-            Console.WriteLine("Patient add successfully");
         }
-
         public void RemovePatient(Patient patient)
         {
             DoctorPatients.Remove(patient);
-            Console.WriteLine(" remove Patient  successfully");
         }
-
-
-
-        public  void DisplayInfo()
-        {
-            base.DisplayInfo();
-            Console.WriteLine($" doctor id : {DoctorID} , Specialization : {Specialization} ");
-
-        }
-
+        //public override void DisplayInfo()
+        //{
+        //    base.DisplayInfo();
+        //    Console.WriteLine($" doctor id : {DoctorID} , Specialization : {Specialization} ");
+        //}
         //Assigns the doctor to a specific clinic
         public void AssignToClinic(Clinic clinic, DateTime day, TimeSpan period)
         {
-
-            
-            if (!AssignedClinics.Contains(clinic)) 
+            if (!AssignedClinics.Contains(clinic))
             {
                 clinic.AddAvailableAppointment(this, day, period);
                 AssignedClinics.Add(clinic);
@@ -65,8 +45,6 @@ namespace HospitalClassINhernite
                 Console.WriteLine("the clinic in the list");
             }
         }
-
-
         public void DisplayAssignedClinics() //Displays all clinics the doctor is assigned to.
         {
             if (AssignedClinics.Count == 0)
@@ -82,29 +60,9 @@ namespace HospitalClassINhernite
                 }
             }
         }
-         public void BookAppointment()
+        public void setnurse(Nurse nurse)
         {
-
-        }
-
-        public void  Discharge()
-        {
-
-        }
-        public void AssignRoom()
-        {
-            //AssignedClinics.Clear();
-            //AssignedClinics.AddRange(AssignedClinics);
-
-
-        }
-        public void ScheduleAppointment()
-        {
-
-        }
-        public void CancelAppointment()
-        {
-
+            this.nurse = nurse;
         }
     }
 }
