@@ -1,8 +1,8 @@
-﻿using static HospitalClassINhernite.Room;
-
+﻿using System.Xml.Linq;
+using static HospitalClassINhernite.Room;
 namespace HospitalClassINhernite
 {
-    public class Room: IRoomManagement, IDisplayInfo
+    public class Room : IDisplayInfo , IRoomManagement
     {
         public static List<Patient> roomlist = new List<Patient>();
         public int RoomNumber;
@@ -15,10 +15,7 @@ namespace HospitalClassINhernite
         {
             RoomNumber = roomNumber;
             R = roomType;
-
         }
-
-
         public void OccupyRoom()
         {
             if (IsOccupied)
@@ -45,22 +42,27 @@ namespace HospitalClassINhernite
         {
             AssignedClinic = clinic;
         }
-        public interface IRoomManagement
+
+        public void occupancyStatus()
         {
-            void OccupyRoom();
-            void VacateRoom();
-            
+            // Check the current status of the room
+            if (IsOccupied)
+            {
+                // If the room is occupied, display its current status
+                Console.WriteLine($"Room Number {RoomNumber} (Type: {R}) is currently OCCUPIED.");
+            }
+            else
+            {
+                // If the room is available, display its current status
+                Console.WriteLine($"Room Number {RoomNumber} (Type: {R}) is AVAILABLE for use.");
+            }
         }
-        public interface IDisplayInfo
+
+        public void DisplayInfo()
         {
-            void DisplayInfo();
 
-
-        }
-        public void DisplayInfo(IDisplayInfo info)
-        {
+            Console.WriteLine($"Room Number:{RoomNumber},room Type : {R} ");
 
         }
-
     }
 }
