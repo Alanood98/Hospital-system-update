@@ -64,5 +64,22 @@ namespace HospitalClassINhernite
         {
             this.nurse = nurse;
         }
+
+        public void CheckVitals(Patient patient)
+        {
+            double Temperature;
+            int HeartRate;
+            int BloodPressure;
+            Console.WriteLine($"Entering vitals for patient: {patient.Name}");
+            Console.Write("Enter Temperature: ");
+            patient.Temperature = Double.Parse(Console.ReadLine());
+            Console.Write("Enter Heart Rate: ");
+            patient.HeartRate = int.Parse(Console.ReadLine());
+            Console.Write("Enter Blood Pressure: ");
+            patient.BloodPressure = int.Parse(Console.ReadLine());
+            Console.WriteLine("\nVital signs updated.");
+        
+    }
+
     }
 }
