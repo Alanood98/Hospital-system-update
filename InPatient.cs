@@ -9,7 +9,7 @@ using static HospitalClassINhernite.Patient;
 
 namespace HospitalClassINhernite
 {
-    public class InPatient : Patient 
+    public class InPatient : Patient , IInPatientCare
     {
         public Room Room;
         public Doctor AssignedDoctor;
@@ -17,10 +17,10 @@ namespace HospitalClassINhernite
 
 
 
-        public InPatient(int pationid, string name, int age, Gender gender, string ailmenrt, Doctor assignedDoctor, Room room, DateTime admissionDate) : base(pationid, name, age, gender, ailmenrt, assignedDoctor)
+        public InPatient(int pationid, string name, int age, Gender gender, string ailmenrt, Doctor doctor, Room room, DateTime admissionDate) : base(pationid, name, age, gender, ailmenrt, assignedDoctor)
         {
             Room = room;
-            AssignedDoctor = assignedDoctor;
+            AssignedDoctor = doctor;
             AdmissionDate = admissionDate;
         }
         public void AssignRoom(Room room)
@@ -28,6 +28,7 @@ namespace HospitalClassINhernite
 
             room.OccupyRoom();
             AssignedRoom = room;
+
 
         }
 
@@ -46,10 +47,20 @@ namespace HospitalClassINhernite
 
         }
 
-        public interface IInPatientCare : IPatientCare
+      
+        public void AssigneDoctor(Doctor doctor)
         {
-            void Discharge();
-            void AssignRoom();
+            AssignedDoctor = doctor;
+        }
+
+        public void AssigningRooms(InPatient inPatient, Room room)
+        {
+            room.OccupyRoom();
+            AssignedRoom = inPatient; AssignedRoom.VacateRoom();
+
+        }
+        public void DischargingPatients(InPatient inPatient, Room room)
+        {
 
         }
 

@@ -2,7 +2,7 @@
 
 namespace HospitalClassINhernite
 {
-    public abstract class Person: IDisplayInfo
+    public abstract class Person : IDisplayInfo
     {
 
         public string Name;
@@ -18,15 +18,12 @@ namespace HospitalClassINhernite
 
 
         }
-        public  void DisplayInfo()
-        {
-            Console.WriteLine($"Name : {Name} , Age : {Age} , Gender : {g}");
-        }
 
-        public interface IDisplayInfo
+
+        public void DisplayInfo()
         {
-            void DisplayInfo();
            
+           Console.WriteLine($"Name : {Name} , Age : {Age} , Gender : {g}");
 
         }
 
@@ -36,5 +33,5 @@ namespace HospitalClassINhernite
 
 
 
-    }
+}
 }

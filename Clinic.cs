@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using static HospitalClassINhernite.Appointment;
@@ -123,15 +124,18 @@ namespace HospitalClassINhernite
                 Console.WriteLine("Doctor Not Found..");
             }
         }
-        public interface IDisplayInfo
+        public void DisplayInfo()
         {
-            void DisplayInfo();
-
-
+            
+            Console.WriteLine($"clinic Number: {ClinicName}, Clinic Specialization: {ClinicSpec}");
         }
-        public void DisplayInfo(IDisplayInfo info)
+        public void ScheduleAppointment() 
         {
-           
+            this.patient = patient;
+            AppointmentDate = dateappo;
+            AppointmentTime = appointmentTime;
+            IsBooked = true;
         }
+        
     }
 }

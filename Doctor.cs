@@ -3,7 +3,7 @@ using System.Numerics;
 using System.Reflection;
 namespace HospitalClassINhernite
 {
-    public class Doctor : Person , IOutPatientCare, IInPatientCare
+    public class Doctor : Person , IOutPatientCare, IInPatientCare, IPatientCare
     {
         public int DoctorID;
         public enum DocSpec

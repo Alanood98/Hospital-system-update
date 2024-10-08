@@ -4,7 +4,7 @@ using static HospitalClassINhernite.Appointment;
 using static HospitalClassINhernite.Patient;
 namespace HospitalClassINhernite
 {
-    public class Appointment: IDisplayInfo
+    public class Appointment: IDisplayInfo , ISchedulable
     {
         public Patient patient;
         public Doctor doctor;
@@ -37,21 +37,19 @@ namespace HospitalClassINhernite
         {
             Console.WriteLine($"Appointment scheduled for {patient.Name} on {AppointmentDate.Value:MMMM dd, yyyy} at {AppointmentTime:hh\\:mm}");
         }
-        public interface IDisplayInfo
-        {
-            void DisplayInfo();
-
-
-        }
+        
         public void DisplayInfo()
         {
             Console.WriteLine($"Appointment scheduled for {patient.Name} on {AppointmentDate.Value:MMMM dd, yyyy} at {AppointmentTime:hh\\:mm}");
         }
 
-        public interface ISchedulable
+       
+        public void ScheduleAppointment()
         {
-            void ScheduleAppointment();
-            void CancelAppointment();
+
+        }
+        public void CancelAppointment()
+        {
 
         }
     }
