@@ -11,6 +11,7 @@ namespace HospitalClassINhernite
         public RoomType R { get; set; }
         public bool IsOccupied;
         public Clinic AssignedClinic;
+        public string Status;
         public Room(int roomNumber, RoomType roomType)
         {
             RoomNumber = roomNumber;
@@ -45,24 +46,25 @@ namespace HospitalClassINhernite
 
         public void occupancyStatus()
         {
-            // Check the current status of the room
+            // Check the current status of the room and store it in roomStatus
             if (IsOccupied)
             {
-                // If the room is occupied, display its current status
-                Console.WriteLine($"Room Number {RoomNumber} (Type: {R}) is currently OCCUPIED.");
+                Status = "OCCUPIED";
             }
             else
             {
-                // If the room is available, display its current status
-                Console.WriteLine($"Room Number {RoomNumber} (Type: {R}) is AVAILABLE for use.");
+                Status = "AVAILABLE";
             }
+
+            // Optionally print the status here if you want immediate feedback
+            Console.WriteLine($"Room Number {RoomNumber}  is currently {Status}.");
         }
 
+        // DisplayInfo method to print room details along with occupancy status
         public void DisplayInfo()
         {
-
-            Console.WriteLine($"Room Number:{RoomNumber},room Type : {R} ");
-
+            // Print room information and the stored room status
+            Console.WriteLine($"Room Number: {RoomNumber}, Room Type: {R}, Room Status: {Status}");
         }
     }
 }
